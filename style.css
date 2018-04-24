@@ -1,0 +1,207 @@
+/* ----------------------------------------------------------------------------
+ * Default settings.
+ *
+ * Note: to meet the design specification in img-tea-cozy-redline.jpg, we have
+ * to remove the margin inherited from the user agent stylesheet because the
+ * distances to the elements in that specification are measured from the edge
+ * of the browser window. In the Chrome browser, the default margin for the
+ * body element is 8 pixels, so we set the margin to 0 pixels here.
+ * ----------------------------------------------------------------------------
+ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    margin: 0px;
+}
+
+/* ----------------------------------------------------------------------------
+ * Reset header padding and margins to assist with meeting design specs.
+ * ----------------------------------------------------------------------------
+ */
+
+
+h2, h3, h4 {
+    margin: 0px;
+    padding: 10px;
+}
+
+/* ----------------------------------------------------------------------------
+ * Helper classes for common CSS attribute combinations.
+ * ----------------------------------------------------------------------------
+ */
+
+ .opaque {
+    background-color: black;
+    opacity: 1;
+}
+
+.section_header {
+    width: 100%;
+    z-index: 2;
+}
+
+/* ----------------------------------------------------------------------------
+ * Page Header.
+ * ----------------------------------------------------------------------------
+ */
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid seashell;
+    height: 69px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+/* ----------------------------------------------------------------------------
+ * Header Logo.
+ * ----------------------------------------------------------------------------
+ */
+
+.header img {
+    height: 50px;
+    width: auto;
+    padding-left: 10px;
+}
+
+/* ----------------------------------------------------------------------------
+ * Header Navigation.
+ * ----------------------------------------------------------------------------
+ */
+
+.header nav {
+    display: flex;
+    flex-flow: row wrap;
+    padding-right: 10px;
+}
+
+.header span {
+    padding-left: 30px;
+}
+
+.header a {
+    color: seashell;
+    text-decoration: underline;
+}
+
+/* ----------------------------------------------------------------------------
+ * Page Content.
+ * ----------------------------------------------------------------------------
+ */
+
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 70px;
+}
+
+/* ----------------------------------------------------------------------------
+ * Mission Statement Section.
+ * ----------------------------------------------------------------------------
+ */
+
+#mission {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url(resources/img-mission-background.jpg);
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 1200px;
+}
+
+/* ----------------------------------------------------------------------------
+ * Featured Tea Section.
+ *
+ * The design specifications do not specify a height for this section, but
+ * there is clearly a band of vertical space bewtween the mission section
+ * and this section and a similarly-sized band of space between this section
+ * and the location section. A padding of 70 pixels appears to be a good
+ * choice and achieves symetry/balance with the header.
+ * ----------------------------------------------------------------------------
+ */
+
+#products {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 70px 0px;
+    width: 1000px;
+}
+
+.product img {
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+}
+
+.product span {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+/* ----------------------------------------------------------------------------
+ * Store Location Section.
+ *
+ * Although the design specifications do not provide a height for the store
+ * location divs, they appear to be square, and the content appears to be
+ * evenly-distributed vertically. A perfect square, however, cuts off the
+ * top of the coffee cup in the background image. A height of 270 pixels
+ * looks sufficiently square-ish without covering up the coffee cup. Again
+ * a padding of 70 pixels from the start of the section to the Location
+ * heading achieves the correct distribution of elements and is in harmony
+ * with the heading and the vertical spacing in the previous section.
+ * ----------------------------------------------------------------------------
+ */
+
+#locations {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    background-image: url(resources/img-locations-background.jpg);
+    background-repeat: no-repeat;
+    padding-top: 70px;
+    height: 500px;
+    width: 1200px;
+}
+
+.location {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    height: 270px;
+    width: 300px;
+    margin: 15px 20px;
+}
+
+/* ----------------------------------------------------------------------------
+ * Page Footer.
+ *
+ * The defaults for each element seem to provide the right appearance.
+ * ----------------------------------------------------------------------------
+ */
+
+.footer {
+    height: 200px;
+}
+
+.copyright {
+    text-align: left;
+    padding-left: 20px;
+}
